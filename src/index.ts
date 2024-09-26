@@ -20,7 +20,7 @@ mongoose.connect('mongodb+srv://assignment_user:HCgEj5zv8Hxwa4xO@test-cluster.6f
 
 // Define the structure of a Task
 interface Task {
-  id: number; // or string, based on your ID generation strategy
+  id: number; 
   text: string;
 }
 
@@ -36,9 +36,7 @@ io.on('connection', (socket: Socket) => {
       tasks.push(task); // Add the new task
 
       if (tasks.length > 50) {
-        // Logic to move tasks to MongoDB and flush Redis
-        // Store in MongoDB
-        // Clear Redis
+        
       } else {
         // Store back to Redis
         await redisClient.set(`FULLSTACK_TASK_<YOUR_FIRST_NAME>`, JSON.stringify(tasks));
