@@ -1,4 +1,3 @@
-// TodoInput.tsx
 import React, { useState } from 'react';
 
 interface TodoInputProps {
@@ -9,7 +8,7 @@ const TodoInput: React.FC<TodoInputProps> = ({ addList }) => {
   const [inputText, setInputText] = useState('');
 
   const handleEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') { // Use 'key' instead of keyCode
+    if (e.key === 'Enter') { 
       addList(inputText);
       setInputText('');
     }
