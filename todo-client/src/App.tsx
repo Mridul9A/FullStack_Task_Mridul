@@ -1,10 +1,10 @@
-// App.tsx or App.js
+
 import React, { useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
 import './App.css';
 
 type Task = {
-  id: number; // or string, depending on your implementation
+  id: number; 
   text: string;
 };
 
@@ -26,9 +26,9 @@ function App() {
 
   const addTask = () => {
     if (inputText.trim() !== '') {
-      const newTask: Task = { id: Date.now(), text: inputText }; // Example ID generation
-      socket.emit('add', newTask); // Send task to server
-      setInputText(''); // Clear input field
+      const newTask: Task = { id: Date.now(), text: inputText }; 
+      socket.emit('add', newTask);
+      setInputText(''); 
     }
   };
 
