@@ -1,4 +1,3 @@
-// TodoList.tsx
 import React from 'react';
 import { TodoItem } from '../types';
 
@@ -14,7 +13,7 @@ const TodoList: React.FC<TodoListProps> = ({ item, deleteItem }) => {
       <span className='icons'>
         <i
           className="fa-solid fa-trash-can icon-delete"
-          onClick={() => deleteItem(item.id)} // Call deleteItem with the item's id
+          onClick={() => deleteItem(item.id)} 
         ></i>
       </span>
     </li>
